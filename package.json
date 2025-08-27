@@ -2,13 +2,13 @@
   "name": "my-v0-project",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
+"scripts": {
   "build": "next build",
   "dev": "next dev",
   "lint": "next lint",
-  "start": "npx next start",
+  "start": "next start",
   "postinstall": "next build"
-      },
+},
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "1.2.2",
