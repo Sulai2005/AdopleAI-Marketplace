@@ -27,8 +27,7 @@ jobs:
         env:
             NPM_CONFIG_LEGACY_PEER_DEPS: true
         run: |
-          npm install
-          npm install next --legacy-peer-deps
+          npm install --legacy-peer-deps
           npm run build
           
       - name: Upload artifact for deployment job
@@ -68,6 +67,7 @@ jobs:
           package: .
 
           
+
 
 
 
