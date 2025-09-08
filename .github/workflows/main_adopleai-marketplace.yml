@@ -1,4 +1,4 @@
-name: Build and deploy Node.js app to Azure Web App (OIDC)
+name: Build and deploy Node.js app to Azure Web App - AdopleAI-Marketplace (OIDC)
 
 on:
   push:
@@ -49,20 +49,11 @@ jobs:
         with:
           name: node-app
 
-      - name: Debug Tenant ID presence
-        run: |
-          if [ -z "${{ secrets.AZURE_TENANT_ID }}" ]; then
-            echo "❌ AZURE_TENANT_ID is empty! Please check your GitHub Secrets."
-            exit 1
-          else
-            echo "✅ AZURE_TENANT_ID is set."
-          fi
-
       - name: Azure Login (OIDC)
         uses: azure/login@v2
         with:
           auth-type: 'oidc'
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          tenant-id: '333d7ebd-77f9-4318-a859-f63db2bd8201'   # Hardcoded Tenant ID
 
       - name: Verify Azure Login
         run: az account show
