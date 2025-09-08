@@ -53,7 +53,7 @@ jobs:
         uses: azure/login@v2
         with:
           auth-type: 'oidc'
-          tenant-id: '333d7ebd-77f9-4318-a859-f63db2bd8201'   # Hardcoded Tenant ID
+          tenant-id: '333d7ebd-77f9-4318-a859-f63db2bd8201'   
 
       - name: Verify Azure Login
         run: az account show
